@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="{% static 'base.css' %}">
+  <title>Beer!</title>
+</head>
+<body>
+  <header>
+    <h1><a href="{% url 'beer_list' %}">Beer Here</a></h1>
+    <nav>
+      <ul>
+        <li><a href="{% url 'beer_list' %}">Beer List</a></li>
+        <li><a href="{% url 'beer_create' %}">New Beer</a></li>
+      
+      </ul>
+    </nav>
+  </header>
+  {% block content %}
+  <p>undefined</p>
+  {% endblock content %}
+</body>
+</html>
